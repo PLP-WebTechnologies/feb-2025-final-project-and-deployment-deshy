@@ -1,0 +1,255 @@
+//blog site files
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Website - A platform to share thoughts and stories.">
+    <title>My Blog - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Welcome to My Blog</h1>
+            <p>Your go-to place for interesting stories, tech discussions, and life lessons!</p>
+        </section>
+
+        <section class="blog-posts">
+            <article>
+                <h2>Blog Post 1</h2>
+                <p>This is an example of the first blog post.</p>
+                <button id="read-more">Read More</button>
+            </article>
+            <article>
+                <h2>Blog Post 2</h2>
+                <p>This is an example of the second blog post.</p>
+                <button id="read-more">Read More</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Blog | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+//about
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About the Blog - Learn more about the purpose of this platform.">
+    <title>About - My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>About This Blog</h1>
+            <p>This blog is a collection of my thoughts, ideas, and stories. I share articles about technology, lifestyle,
+                and personal experiences. Join me on this journey of exploration!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Blog | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+//contact
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Page - Get in touch with the blog author.">
+    <title>Contact - My Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Contact Me</h1>
+            <p>If you'd like to reach out to me, feel free to use the contact form below:</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Blog | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+//style
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-posts article {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .blog-posts {
+        flex-direction: column;
+    }
+}
+
+
+//script
+// JavaScript for Read More Button
+const buttons = document.querySelectorAll("#read-more");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        alert("You clicked the 'Read More' button!");
+    });
+});
+
+// JavaScript for Contact Form Submission (Mock Submission)
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent actual form submission for demo
+    alert("Your message has been sent!");
+});
